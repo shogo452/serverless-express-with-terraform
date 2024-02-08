@@ -104,6 +104,6 @@ module "api_gateway" {
   stage_name            = "dev"
   lambda_function_name  = module.lambda.function_name
   api_key_name          = "sample-api-dev-key"
-  api_key_value         = "GrkwFWzzBZDkP7DTZJxMCkPunCgRci6g"
+  api_key_value         = "sample-api-dev-key-value" # Please specify a specific value.
   usage_plan_name       = "sample-api-dev-usage-plan"
 }
