@@ -150,9 +150,17 @@ resource "aws_lambda_permission" "main" {
   source_arn = "${aws_api_gateway_stage.main.execution_arn}/*"
 }
 
+data "aws_secretsmanager_secret_version" "main" {
+  secret_id = var.secret_id
+}
+
+locals {
+  credentials = jsondecode(data.aws_secretsmanager_secret_version.main.secret_string)
+}
+
 resource "aws_api_gateway_api_key" "main" {
   name  = var.api_key_name
-  value = var.api_key_value
+  value = local.credentials[var.credential_key]
 }
 
 resource "aws_api_gateway_usage_plan" "main" {

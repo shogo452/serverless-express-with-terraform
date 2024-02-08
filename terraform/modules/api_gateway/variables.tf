@@ -38,8 +38,13 @@ variable "api_key_name" {
   type        = string
 }
 
-variable "api_key_value" {
-  description = "value of the API key value"
+variable "secret_id" {
+  description = "value of the secret ID"
+  type        = string
+}
+
+variable "credential_key" {
+  description = "value of the credential key"
   type        = string
 }
 
