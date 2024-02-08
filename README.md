@@ -89,12 +89,13 @@ The creation of the following resources, which are not managed by this repositor
 
 * S3 Bucket for tfstate file
   * Bucket name like `serverless-express-with-terraform-tfstate`
-* Sercrets for RDS in Secrets Manager
+* Sercrets in Secrets Manager
   * master_username
   * master_password
   * port
   * database_name
   * kms_key_id
+  * api_key
 * KMS Key for RDS
   If not already created, please use the following CLI command to create the key.
 
