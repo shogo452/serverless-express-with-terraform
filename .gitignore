@@ -1,7 +1,6 @@
 # ----------------------------------------------------------------------
 # Ref. https://github.com/github/gitignore/blob/main/Node.gitignore
 # ----------------------------------------------------------------------
-
 # Logs
 logs
 *.log
@@ -136,7 +135,6 @@ dist
 # -------------------------------------------------------------------------
 # Ref. https://github.com/github/gitignore/blob/main/Terraform.gitignore
 # -------------------------------------------------------------------------
-
 # Local .terraform directories
 **/.terraform/*
 

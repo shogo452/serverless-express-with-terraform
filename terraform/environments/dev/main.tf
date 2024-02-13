@@ -108,3 +108,21 @@ module "api_gateway" {
   credential_key        = "dev_api_key"
   usage_plan_name       = "sample-api-dev-usage-plan"
 }
+
+module "elasticache" {
+  source                     = "../../modules/elasticache"
+  subnet_group_name          = "sample-dev-redis-cluster-subnet-group"
+  private_subnet_1a_id       = module.vpc.private_subnet_1a_id
+  private_subnet_1c_id       = module.vpc.private_subnet_1c_id
+  automatic_failover_enabled = true
+  engine_version             = "7.0"
+  maintenance_window         = "sat:16:00-sat:17:00" # UTC
+  multi_az_enabled           = false
+  snapshot_retention_limit   = 7
+  snapshot_window            = "17:00-18:00" # UTC
+  replication_group_id       = "sample-dev-redis-cluster"
+  description                = "sample-dev-redis-cluster"
+  node_type                  = "cache.t4g.small"
+  num_cache_clusters         = 2
+  security_group_ids         = [module.vpc.elasticache_security_group_id]
+}

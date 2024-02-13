@@ -53,9 +53,14 @@ output "vpc_rds_security_group_id" {
   value       = module.vpc.rds_security_group_id
 }
 
-output "lambda_security_group_id" {
+output "vpc_lambda_security_group_id" {
   description = "value of the lambda security group ID"
   value       = module.vpc.lambda_security_group_id
+}
+
+output "vpc_elasticache_security_group_id" {
+  description = "value of the rds security group ID"
+  value       = module.vpc.rds_security_group_id
 }
 
 output "ec2_instance_id" {

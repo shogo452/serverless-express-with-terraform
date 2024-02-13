@@ -143,3 +143,25 @@ resource "aws_security_group" "lambda" {
     cidr_blocks = ["0.0.0.0/0"]
   }
 }
+
+resource "aws_security_group" "elasticache" {
+  name        = "elasticache"
+  description = "Allow access to Elasticache"
+  vpc_id      = aws_vpc.vpc.id
+
+  ingress {
+    description = "Access to Elasticache"
+    from_port   = 6379
+    to_port     = 6379
+    protocol    = "tcp"
+    cidr_blocks = [aws_subnet.public_1a.cidr_block, aws_subnet.private_1d.cidr_block]
+  }
+
+  egress {
+    description = "Allow trafic by Elasticache"
+    from_port   = 0
+    to_port     = 0
+    protocol    = "-1"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+}
