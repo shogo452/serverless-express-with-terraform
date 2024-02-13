@@ -107,3 +107,13 @@ output "api_gateway_log_group_name" {
   description = "value of the API Gateway log group name"
   value       = module.api_gateway.log_group_name
 }
+
+output "elasticahce_primary_endpoint" {
+  description = "value of the Elasticahce primary instance endpoint"
+  value       = module.elasticache.primary_endpoint
+}
+
+output "elasticache_reader_endpoint" {
+  description = "value of the RDS reader instance endpoint"
+  value       = module.elasticache.reader_endpoint
+}
