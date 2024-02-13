@@ -56,3 +56,8 @@ output "lambda_security_group_id" {
   description = "value of the lambda security group ID"
   value       = aws_security_group.lambda.id
 }
+
+output "elasticache_security_group_id" {
+  description = "value of the elasticache security group ID"
+  value       = aws_security_group.elasticache.id
+}
