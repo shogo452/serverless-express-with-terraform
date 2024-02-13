@@ -32,3 +32,23 @@ variable "rds_reader_endpoint" {
   description = "value of the rds reader endpoint"
   type        = string
 }
+
+variable "elasticache_primary_host_alias_name" {
+  description = "value of the elasticache primary host alias name"
+  type        = string
+}
+
+variable "elasticache_primary_endpoint" {
+  description = "value of the elasticache primary endpoint"
+  type        = string
+}
+
+variable "elasticache_reader_host_alias_name" {
+  description = "value of the elasticache reader host alias name"
+  type        = string
+}
+
+variable "elasticache_reader_endpoint" {
+  description = "value of the elasticache reader endpoint"
+  type        = string
+}

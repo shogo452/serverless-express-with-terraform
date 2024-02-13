@@ -6,7 +6,7 @@ This repository contains sample code for building AWS infrastructure resources w
 
 The diagram created using [pluralith](https://github.com/Pluralith/pluralith-cli).
 
-![project_pluralith-local-project%2Frun_4511613%2Frun_4511613_1707395331764](https://github.com/shogo452/serverless-express-with-terraform/assets/54160947/20fa2ca9-635a-4261-b2fb-8874dca2f203)
+![project_pluralith-local-project%2Frun_5796186%2Frun_5796186_1707815395710](https://github.com/shogo452/serverless-express-with-terraform/assets/54160947/0cf5985a-19d0-4cbd-b109-d47f5dea78b6)
 
 ## Directory structure
 

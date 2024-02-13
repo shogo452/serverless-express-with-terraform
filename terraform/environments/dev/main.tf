@@ -66,6 +66,10 @@ module "route53" {
   rds_writer_endpoint         = module.rds.writer_endpoint
   rds_replica_host_alias_name = "replica.rds.sample-dev"
   rds_reader_endpoint         = module.rds.reader_endpoint
+  elasticache_primary_host_alias_name = "primary.elasticache.sample-dev"
+  elasticache_primary_endpoint        = module.elasticache.primary_endpoint
+  elasticache_reader_host_alias_name  = "reader.elasticache.sample-dev"
+  elasticache_reader_endpoint         = module.elasticache.reader_endpoint
 }
 
 module "s3" {
